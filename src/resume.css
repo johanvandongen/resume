@@ -148,6 +148,12 @@
       flex-direction: row;
       align-items: center;
     }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        gap: 0.1rem;
+    }
   
     .language .rating svg {
       fill: #c8c8c8;

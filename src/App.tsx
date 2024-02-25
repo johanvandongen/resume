@@ -6,7 +6,7 @@ import { Contact } from './Contact';
 import { RatingItem } from './RatingItem';
 import { SubSectionHeader } from './SubSectionHeader';
 import { Section } from './Section';
-import { HobbyList } from './HobbyList';
+import { SimpleList } from './SimpleList';
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
                             </ul>
                         ]}/>
                         <Section title={'Hobbies and interests'} children={[
-                            <HobbyList/>
+                            <SimpleList items={['Technology', 'Programming', 'Video editing', 'Snowboarding']}/>
                         ]}/>
                         <Section title={'Profile'} children={[<p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>]}/>
                     </div>

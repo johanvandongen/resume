@@ -3,11 +3,10 @@ import './index.css';
 import './App.css';
 import './resume.css';
 import { Contact } from './Contact';
-import { Rating } from './Rating';
 import { RatingItem } from './RatingItem';
 import { SubSectionHeader } from './SubSectionHeader';
 import { Section } from './Section';
-// import Image from './output.JPG';
+import { HobbyList } from './HobbyList';
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
                         <img src={require('./output.JPG')} alt='da'></img>
                         </div>
                     </div>
-                    {/* <div> */}
                         <Contact/>
                         <Section title={'Languages'} children={[
                             <ul>
@@ -42,16 +40,9 @@ function App() {
                             </ul>
                         ]}/>
                         <Section title={'Hobbies and interests'} children={[
-                            <ul className="hobby-list">
-                                <li><p>Technology</p></li>
-                                <li><p>Programming</p></li>
-                                <li><p>Video editing</p></li>
-                                <li><p>Snowboarding</p></li>
-                            </ul>
+                            <HobbyList/>
                         ]}/>
                         <Section title={'Profile'} children={[<p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>]}/>
-                    {/* </div> */}
-                    
                     </div>
                 </div>
                 <div className="rightPanel">

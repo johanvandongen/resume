@@ -125,15 +125,3 @@
     .icon {
       width: 30px
     }
-  
-    .hobby-list {
-      list-style-type: square;
-    }
-    .hobby-list li {
-      margin-left: 1rem;
-      color: #395a87;
-    }
-  
-    .hobby-list li p{
-      color: black;
-    }

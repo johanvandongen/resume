@@ -7,6 +7,7 @@ import { RatingItem } from './RatingItem';
 import { SubSectionHeader } from './SubSectionHeader';
 import { Section } from './Section';
 import { SimpleList } from './SimpleList';
+import { Background } from './Background';
 
 function App() {
   return (
@@ -14,23 +15,14 @@ function App() {
         <div className='page'>
             <div className="container">
                 <div className="leftPanel">
-                    <div className="shape2">
-                        <svg width="300" height="500">
-                            <circle cx="150" cy="-100" r="250" fill="#395a87" />
-                        </svg>
-                    </div>
-                    <div className="shape">
-                        <svg width="2000" height="2000">
-                            <circle cx="1000" cy="100" r="1000" fill="#e6e6e6" />
-                        </svg>
-                    </div>
+                    <Background/>
                     <div className="content-box">
-                    <div className="profile">
-                        <p>Johan van Dongen</p>
-                        <div className="profile-picture">
-                        <img src={require('./output.JPG')} alt='da'></img>
+                        <div className="profile">
+                            <p>Johan van Dongen</p>
+                            <div className="profile-picture">
+                                <img src={require('./output.JPG')} alt='da'></img>
+                            </div>
                         </div>
-                    </div>
                         <Contact/>
                         <Section title={'Languages'} children={[
                             <ul>
@@ -65,7 +57,9 @@ function App() {
                             <SubSectionHeader title={'Author, Developer'} subtitle={'Algebrakit, Eindhoven'} date={'apr 2022 - aug 2023'}/>
                             <p>
                                 I primarily served as an author, digitizing math exercises from high school textbooks. 
-                                {/* <br><br> */}
+                            </p>
+                            <br></br>
+                            <p>
                                 Additionally, I played a pivotal role in a project exploring the feasibility of developing a graphing tool for plotting implicit functions and inequalities. 
                                 As part of a two-person team, we analyzed a provided paper, implemented the described algorithms, and partially built a graphing tool. Our efforts included reporting on the tool's drawbacks, advantages, challenging points, and providing an estimate for the expected duration.
                                 The project showcased its potential and demonstrated the viability of creating a powerful visualization tool for mathematical concepts.

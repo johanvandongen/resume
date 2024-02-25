@@ -1,6 +1,6 @@
 :root {
     --svg-color-fill: blue;
-  }
+}
 
 .container {
     display: flex;
@@ -57,29 +57,4 @@
     align-items: center;
     width: 100%;
     gap: 1rem;
-}
-
-.info-list {
-    list-style-type: none;
-}
-
-.info-list li {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
-
-.info-list li img {
-    margin-right: 10px;
-    fill: blue;
-}
-
-.info-list li svg {
-    /* margin-right: 10px; */
-    width: 30px;
-    fill: #395a87;
-}
-
-.icon {
-    width: 30px
 }

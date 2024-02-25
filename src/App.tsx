@@ -5,6 +5,8 @@ import './resume.css';
 import { Contact } from './Contact';
 import { Rating } from './Rating';
 import { RatingItem } from './RatingItem';
+import { SubSectionHeader } from './SubSectionHeader';
+import { Section } from './Section';
 // import Image from './output.JPG';
 
 function App() {
@@ -30,70 +32,62 @@ function App() {
                         <img src={require('./output.JPG')} alt='da'></img>
                         </div>
                     </div>
-                    <Contact/>
-                    <div className="personalia">
-                        <p className="title">Languages</p>
-                        <ul>
-                            <RatingItem label={'Dutch'} rating={5} maxRating={5}/>
-                            <RatingItem label={'English'} rating={5} maxRating={5}/>
-                            <RatingItem label={'German'} rating={2} maxRating={5}/>
-                        </ul>
-
-                    </div>
-                    <div className="personalia">
-                        <p className="title">Hobbies and interests</p>
-                        <ul className="hobby-list">
-                            <li><p>Technology</p></li>
-                            <li><p>Programming</p></li>
-                            <li><p>Video editing</p></li>
-                            <li><p>Snowboarding</p></li>
-                        </ul>
-
-                    </div>
-                    <div className="personalia">
-                        <p className="title">Profile</p>
-                        <p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>
-                        
-                    </div>
+                    {/* <div> */}
+                        <Contact/>
+                        <Section title={'Languages'} children={[
+                            <ul>
+                                <RatingItem label={'Dutch'} rating={5} maxRating={5}/>
+                                <RatingItem label={'English'} rating={5} maxRating={5}/>
+                                <RatingItem label={'German'} rating={2} maxRating={5}/>
+                            </ul>
+                        ]}/>
+                        <Section title={'Hobbies and interests'} children={[
+                            <ul className="hobby-list">
+                                <li><p>Technology</p></li>
+                                <li><p>Programming</p></li>
+                                <li><p>Video editing</p></li>
+                                <li><p>Snowboarding</p></li>
+                            </ul>
+                        ]}/>
+                        <Section title={'Profile'} children={[<p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>]}/>
+                    {/* </div> */}
+                    
                     </div>
                 </div>
                 <div className="rightPanel">
-                <div className="personalia">
-                    <p className="title">Education</p>
-                    <div className="section">
-                    <div className="section-title"><p className="bold-title">Bachelor Computer Science</p><p className="under-title">sep 2020 - heden</p></div>
-                    <p className="under-title">TU eindhoven, Eindhoven</p>
-                    <p>My bachelor computer science equipped me with a comprehensive skill set to develop and design maintainable software systems 
-                        I gained proficiency in program architecture, unit testing, and optimizing algorithms for efficiency and correctness. 
-                        This education instilled a problem-solving mindset, honed through collaborative projects, ensuring effective communication and teamwork.</p>
-                    </div>
-                    <div className="section">
-                    <div className="section-title"><p className="bold-title">VWO</p><p className="under-title">sep 2014 - jun 2020</p></div>
-                    <p className="under-title">GSR, Rotterdam</p>
-                    </div>
-                </div>
-                <div className="personalia">
-                    <p className="title">Work experience</p>
-                    <div className="section">
-                    <div className="section-title"><p className="bold-title">Author, Developer</p><p className="under-title">apr 2022 - aug 2023</p></div>
-                    <p className="under-title">Algebrakit, Eindhoven</p>
-                    <p>
-                        I primarily served as an author, digitizing math exercises from high school textbooks. 
-                        {/* <br><br> */}
-                        Additionally, I played a pivotal role in a project exploring the feasibility of developing a graphing tool for plotting implicit functions and inequalities. 
-                        As part of a two-person team, we analyzed a provided paper, implemented the described algorithms, and partially built a graphing tool. Our efforts included reporting on the tool's drawbacks, advantages, challenging points, and providing an estimate for the expected duration.
-                        The project showcased its potential and demonstrated the viability of creating a powerful visualization tool for mathematical concepts.
-                    </p>
-                    </div>
-                    <div className="section">
-                    <div className="section-title"><p className="bold-title">Orderpicker</p><p className="under-title">jun 2020 - sep 2020</p></div>
-                    <p className="under-title">Colorfone, Rotterdam</p>
-                    <p>
-                        I served as an order picker in a warehouse, responsible for loading and unloading trucks as well as picking orders and other related tasks. 
-                        This role provided valuable insights into real-world warehouse logistics, enhancing my understanding of efficient inventory management and distribution processes. 
-                    </p>
-                    </div>
-                </div>
+                    <Section title={'Education'} children={[
+                        <div>
+                            <SubSectionHeader title={'Bachelor Computer Science'} subtitle={'TU eindhoven, Eindhoven'} date={'sep 2020 - heden'}/>
+                            <p>
+                                My bachelor computer science equipped me with a comprehensive skill set to develop and design maintainable software systems 
+                                I gained proficiency in program architecture, unit testing, and optimizing algorithms for efficiency and correctness. 
+                                This education instilled a problem-solving mindset, honed through collaborative projects, ensuring effective communication and teamwork.
+                            </p>
+                        </div>,
+                        <div>
+                            <SubSectionHeader title={'VWO'} subtitle={'GSR, Rotterdam'} date={'sep 2014 - jun 2020'}/>
+                        </div>
+                    ]}/>
+
+                    <Section title={'Work experience'} children={[
+                        <div>
+                            <SubSectionHeader title={'Author, Developer'} subtitle={'Algebrakit, Eindhoven'} date={'apr 2022 - aug 2023'}/>
+                            <p>
+                                I primarily served as an author, digitizing math exercises from high school textbooks. 
+                                {/* <br><br> */}
+                                Additionally, I played a pivotal role in a project exploring the feasibility of developing a graphing tool for plotting implicit functions and inequalities. 
+                                As part of a two-person team, we analyzed a provided paper, implemented the described algorithms, and partially built a graphing tool. Our efforts included reporting on the tool's drawbacks, advantages, challenging points, and providing an estimate for the expected duration.
+                                The project showcased its potential and demonstrated the viability of creating a powerful visualization tool for mathematical concepts.
+                            </p>
+                        </div>,
+                        <div>
+                            <SubSectionHeader title={'Orderpicker'} subtitle={'Colorfone, Rotterdam'} date={'jun 2020 - sep 2020'}/>
+                            <p>
+                                I served as an order picker in a warehouse, responsible for loading and unloading trucks as well as picking orders and other related tasks. 
+                                This role provided valuable insights into real-world warehouse logistics, enhancing my understanding of efficient inventory management and distribution processes. 
+                            </p>
+                        </div>
+                    ]}/>
                 </div>
             </div>
         </div>

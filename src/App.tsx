@@ -18,13 +18,6 @@ function App() {
                 <div className="leftPanel">
                     <Background/>
                     <div className="content-box">
-                        
-                        {/* <div className="profile">
-                            <p>Johan van Dongen</p>
-                            <div className="profile-picture">
-                                <img src={require('./output.JPG')} alt='da'></img>
-                            </div>
-                        </div> */}
                         <ProfilePicture title={'Johan van Dongen'} image={require('./output.JPG')}/>
                         <Contact/>
                         <Section title={'Languages'} children={[

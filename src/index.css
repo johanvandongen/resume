@@ -17,6 +17,7 @@ body {
     background: white;
     position: relative;
     overflow: hidden;
+    margin-bottom: 1cm;
   }
   
   @page {

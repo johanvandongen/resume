@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const SRating = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 0.1rem;
+    gap: 0.2rem;
 `
 
 const SRatingSVG = styled.svg`

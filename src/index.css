@@ -24,7 +24,7 @@ body {
     margin: 0;
   }
   @media print {
-    .page {
+    .page, body {
       margin: 0mm;
       border: initial;
       border-radius: initial;

@@ -4,6 +4,7 @@ import './App.css';
 import './resume.css';
 import { Contact } from './Contact';
 import { Rating } from './Rating';
+import { RatingItem } from './RatingItem';
 // import Image from './output.JPG';
 
 function App() {
@@ -33,28 +34,19 @@ function App() {
                     <div className="personalia">
                         <p className="title">Languages</p>
                         <ul>
-                        <li className="language">
-                            Dutch 
-                            <Rating rating={5} maxRating={5}/>
-                        </li>
-                        <li className="language">
-                            English
-                            <Rating rating={5} maxRating={5}/>
-                        </li>
-                        <li className="language">
-                            German
-                            <Rating rating={2} maxRating={5}/>
-                        </li>
+                            <RatingItem label={'Dutch'} rating={5} maxRating={5}/>
+                            <RatingItem label={'English'} rating={5} maxRating={5}/>
+                            <RatingItem label={'German'} rating={2} maxRating={5}/>
                         </ul>
 
                     </div>
                     <div className="personalia">
                         <p className="title">Hobbies and interests</p>
                         <ul className="hobby-list">
-                        <li><p>Technology</p></li>
-                        <li><p>Programming</p></li>
-                        <li><p>Video editing</p></li>
-                        <li><p>Snowboarding</p></li>
+                            <li><p>Technology</p></li>
+                            <li><p>Programming</p></li>
+                            <li><p>Video editing</p></li>
+                            <li><p>Snowboarding</p></li>
                         </ul>
 
                     </div>

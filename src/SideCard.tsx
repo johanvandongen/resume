@@ -27,14 +27,31 @@ export function SideCard (props: ISideCardProps) {
                 <Section title={'Hobbies and interests'} children={[
                     <SimpleList items={['Technology', 'Programming', 'Video editing', 'Snowboarding']}/>
                 ]}/>
-                <Section title={'Profile'} children={[<p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>]}/>
+                {/* <Section title={'Profile'} children={[<p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>]}/> */}
+                <Section title={'Skills'} children={[
+                        <ul>
+                            <RatingItem label={'Javascript'} rating={5} maxRating={5}/>
+                            <RatingItem label={'Typescript'} rating={5} maxRating={5}/>
+                            <RatingItem label={'Python'} rating={4} maxRating={5}/>
+                            <RatingItem label={'Java'} rating={1.5} maxRating={5}/>
+                            <RatingItem label={'HTML'} rating={4} maxRating={5}/>
+                            <RatingItem label={'CSS'} rating={4} maxRating={5}/>
+                            <RatingItem label={'SQL'} rating={4.5} maxRating={5}/>
+                            <RatingItem label={'Firebase'} rating={4.5} maxRating={5}/>
+                            <RatingItem label={'MongoDB'} rating={3.5} maxRating={5}/>
+                            <RatingItem label={'React'} rating={4.5} maxRating={5}/>
+                            <RatingItem label={'Version control (git)'} rating={4} maxRating={5}/>
+                            <RatingItem label={'Problem solving'} rating={4} maxRating={5}/>
+                            <RatingItem label={'Scrum'} rating={3.5} maxRating={5}/>
+                        </ul>   
+                    ]}/>
             </SCardContentContainer>
         </SCardPanel>
     );
 }
 
 const SCardPanel = styled.div`
-    width: 30%;
+    width: 35%;
     min-height: 100%;
     position: relative;
     background-color: #395a87;

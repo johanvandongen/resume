@@ -10,7 +10,7 @@ interface IRatingProps {
 
 export function RatingItem ({label, rating, maxRating}: IRatingProps) {
   return (
-    <SRatingItemContainer>{label} <Rating rating={rating} maxRating={maxRating}/></SRatingItemContainer>
+    <SRatingItemContainer><p>{label}</p> <Rating rating={rating} maxRating={maxRating}/></SRatingItemContainer>
   );
 }
 
@@ -18,6 +18,8 @@ const SRatingItemContainer = styled.li`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    /* border: 1px solid green; */
 `
     

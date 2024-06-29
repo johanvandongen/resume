@@ -35,14 +35,14 @@ export function Contact (props: IContactProps) {
                     <p>5611PV Eindhoven</p>
                 </div>
             </SInfoListItem>  
-            <SInfoListItem>
+            {/* <SInfoListItem>
                 <SInfoSVG><CalendarIcon/></SInfoSVG>
                 <p>March 9, 2002</p>
-            </SInfoListItem>
-            <SInfoListItem>
+            </SInfoListItem> */}
+            {/* <SInfoListItem>
                 <SInfoSVG><CarIcon/></SInfoSVG>
-                <p>Yes</p>
-            </SInfoListItem>
+                <p>Drivers Licence</p>
+            </SInfoListItem> */}
             <SInfoListItem>
                 <SInfoSVG><GlobeIcon/></SInfoSVG>
                 <a href="https://dingdangdongen.nl">dingdangdongen.nl</a>

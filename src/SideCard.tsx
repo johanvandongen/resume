@@ -6,6 +6,7 @@ import { ProfilePicture } from './ProfilePicture';
 import { RatingItem } from './RatingItem';
 import { Section } from './Section';
 import { SimpleList } from './SimpleList';
+import { WordGrid } from './WordGrid';
 
 export interface ISideCardProps {
 }
@@ -33,7 +34,7 @@ export function SideCard (props: ISideCardProps) {
                             <RatingItem label={'Javascript'} rating={5} maxRating={5}/>
                             <RatingItem label={'Typescript'} rating={5} maxRating={5}/>
                             <RatingItem label={'Python'} rating={4} maxRating={5}/>
-                            <RatingItem label={'Java'} rating={1.5} maxRating={5}/>
+                            <RatingItem label={'C#'} rating={2.5} maxRating={5}/>
                             <RatingItem label={'HTML'} rating={4} maxRating={5}/>
                             <RatingItem label={'CSS'} rating={4} maxRating={5}/>
                             <RatingItem label={'SQL'} rating={4.5} maxRating={5}/>
@@ -41,9 +42,8 @@ export function SideCard (props: ISideCardProps) {
                             <RatingItem label={'MongoDB'} rating={3.5} maxRating={5}/>
                             <RatingItem label={'React'} rating={4.5} maxRating={5}/>
                             <RatingItem label={'Version control (git)'} rating={4} maxRating={5}/>
-                            <RatingItem label={'Problem solving'} rating={4} maxRating={5}/>
-                            <RatingItem label={'Scrum'} rating={3.5} maxRating={5}/>
-                        </ul>   
+                        </ul>,
+                        <WordGrid items={['Problem solving', 'Creativity', 'Leadership', 'Communication', 'Scrum', 'Proactive', 'Work ethic']}/>
                     ]}/>
             </SCardContentContainer>
         </SCardPanel>

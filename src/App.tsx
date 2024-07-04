@@ -15,17 +15,17 @@ function App() {
             <div className="container">
                 <SideCard/>
                 <div className="rightPanel">
-                <Section title={'About'} children={[
+                <Section title={'Profile'} children={[
                         <div>
-                            <p>I am a reliable, organized and hard working individual. I enjoy learning new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>
+                            <p>I am a <b>reliable</b>, <b>organized</b> and <b>hard working</b> individual. <b>I enjoy learning</b> new technologies and creating helpful tools. I set goals for myself and work these out in hobby projects. Ultimately I would love to make these tools bigger and more impactful in a team and company that aligns with my vision.</p>
                             <br></br>
                             <p>
-                                Beyond my passion for programming, I am an avid sports enthusiast
+                                Beyond my passion for programming, I am an avid <b>sports enthusiast </b>
                                 actively involved in various activities and currently contributing to two
                                 futsal teams. Snowboarding holds a special place in my heart, and my
                                 enthusiasm led me to join Avalanche Boarders. Not only do I enjoy
-                                regular snowboarding sessions, but I am also an integral part of the
-                                Snow Committee, where I organize events like the Dutch Freestyle
+                                regular snowboarding sessions, but I am also an <b>integral part of the
+                                Snow Committee</b>, where I organize events like the Dutch Freestyle
                                 Snowboard Championship and a large-scale snow trip for 120 people.
                             </p>
                         </div>
@@ -33,17 +33,12 @@ function App() {
                     <Section title={'Education'} children={[
                         <div>
                             <SubSectionHeader title={'Master Computer Science'} subtitle={'TU eindhoven, Eindhoven'} date={'feb 2024 - current'}/>
+                            <SimpleList items={['Big Data Management']}/>
                         </div>,
                         <div>
                             <SubSectionHeader title={'Bachelor Computer Science'} subtitle={'TU eindhoven, Eindhoven'} date={'sep 2020 - feb 2024'}/> 
                             <p>Grade: <i>Cum Laude</i></p>
-                            {/* <p>
-                                My bachelor computer science equipped me with a comprehensive skill set to develop and design maintainable software systems 
-                                I gained proficiency in program architecture, unit testing, and optimizing algorithms for efficiency and correctness. 
-                                This education instilled a problem-solving mindset, honed through collaborative projects, ensuring effective communication and teamwork.
-                            </p> */}
                             <p>
-                            {/* <br></br> */}
                             This education instilled a problem-solving mindset and helped me develop and design maintainable software systems.
                             <br></br>
                             Courses I found interesting:
@@ -87,33 +82,6 @@ function App() {
                         </div>
                     ]}/>
                 </div>
-            </div>
-        </div>
-        <div className='page'>
-            <div className="container">
-                <div className="rightPanel">
-                    <Section title={'Certificates'} children={[
-                        <div>
-                            <SubSectionHeader title={'Goethe-Zertificat'} subtitle={''} date={'feb 2019'}/>
-                            <p>German language course including a final exam for certificate.</p>
-                        </div>
-                    ]}/>
-                    
-                    <Section title={'GEVAL career interests'} children={[
-                        <div>
-                            <p>
-                            I love building tools, websites, and applications. Setting up projects and thinking about the architecture of the code, working with APIs, databases, and everything that comes with it really suits me.
-                            <br></br><br></br>
-                            Creating an interactive dashboard, where data from a database is visualized and where data can be added and modified, is an example of a project that would make me happy.
-                            <br></br><br></br>
-                            I find it less enjoyable to compile technical documents, do research, and analyze data and machine learning models; It is the programming itself that I enjoy the most.
-                            <br></br><br></br>
-                            <i>Want to know a fun fact? This CV is also self-made with React!</i>
-                            </p>
-                        </div>
-                    ]}/>
-                </div>
-                <SideCard/>
             </div>
         </div>
     </>

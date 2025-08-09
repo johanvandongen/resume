@@ -16,7 +16,7 @@ export function Section ({title, children}: ISectionProps) {
 }
 
 const SSectionContainer = styled.div`
-    width: 80%;
+    width: 90%;
     font-size: small;
     color: black;
 `
@@ -24,7 +24,7 @@ const SSectionContainer = styled.div`
 const SSectionContent = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.2rem;
 `
 
 const SSectionTitle = styled.p`

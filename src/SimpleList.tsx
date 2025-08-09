@@ -13,6 +13,14 @@ export function SimpleList ({items}: ISimpleListProps) {
   );
 }
 
+export function SimpleListComp ({items}: {items: React.ReactElement[]}) {
+  return (
+    <SListContainer>
+        {items.map(item => <SListItem><SListItemText>{item}</SListItemText></SListItem>)}
+    </SListContainer>
+  );
+}
+
 
 const SListContainer = styled.ul`
     list-style-type: square;

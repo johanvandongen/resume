@@ -14,6 +14,12 @@ export function RatingItem ({label, rating, maxRating}: IRatingProps) {
   );
 }
 
+export function RatingItemText ({label, text}: {label: string, text: string}) {
+  return (
+    <SRatingItemContainer><p>{label}</p> <p>{text}</p></SRatingItemContainer>
+  );
+}
+
 const SRatingItemContainer = styled.li`
     display: flex;
     flex-direction: row;

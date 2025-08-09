@@ -4,10 +4,12 @@ import { Section } from './Section';
 import { ReactComponent as UserIcon } from './icons/user-solid.svg';
 import { ReactComponent as CalendarIcon } from './icons/calendar-days-solid.svg';
 import { ReactComponent as CarIcon } from './icons/car-solid.svg';
+import { ReactComponent as YoutubeIcon } from './icons/youtube.svg';
 import { ReactComponent as GlobeIcon } from './icons/globe-solid.svg';
 import { ReactComponent as HouseIcon } from './icons/house-solid.svg';
 import { ReactComponent as PhoneIcon } from './icons/phone-solid.svg';
 import { ReactComponent as EnvelopeIcon } from './icons/envelope-solid.svg';    
+import { SimpleList, SimpleListComp } from './SimpleList';
 
 export interface IContactProps {
 }
@@ -30,15 +32,15 @@ export function Contact (props: IContactProps) {
             </SInfoListItem>
             <SInfoListItem>
             <SInfoSVG><HouseIcon/></SInfoSVG>
-                <div>
-                    <p>Willem van Hornestraat 22</p>
-                    <p>5611PV Eindhoven</p>
-                </div>
+            <SimpleListComp items={[
+                <p>Netherlands, Rotterdam <i style={{'fontSize': 12}}>(Currently)</i></p>,
+                <p>Ramsau im Zillertal <i style={{'fontSize': 12}}>(Nov 2025 - Apr 2026)</i></p>
+                ]} />
             </SInfoListItem>  
-            {/* <SInfoListItem>
+            <SInfoListItem>
                 <SInfoSVG><CalendarIcon/></SInfoSVG>
                 <p>March 9, 2002</p>
-            </SInfoListItem> */}
+            </SInfoListItem>
             {/* <SInfoListItem>
                 <SInfoSVG><CarIcon/></SInfoSVG>
                 <p>Drivers Licence</p>
@@ -46,6 +48,10 @@ export function Contact (props: IContactProps) {
             <SInfoListItem>
                 <SInfoSVG><GlobeIcon/></SInfoSVG>
                 <a href="https://dingdangdongen.nl">dingdangdongen.nl</a>
+            </SInfoListItem>
+            <SInfoListItem>
+                <SInfoSVG><YoutubeIcon/></SInfoSVG>
+                <a href="https://www.youtube.com/playlist?list=PLw7BJY_mw5y-x24bypW8aBJJRyAmn7GFU">Snowboard clips</a>
             </SInfoListItem>
         </SInfoList>
     ]}/>

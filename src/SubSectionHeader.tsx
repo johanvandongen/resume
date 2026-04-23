@@ -6,14 +6,20 @@ interface ISubSectionHeaderProps {
     subtitle: string;
     date: string;
     nextTitle?: string;
+    titleLink?: string;
 }
 
-export function SubSectionHeader ({title, subtitle, date, nextTitle}: ISubSectionHeaderProps) {
+export function SubSectionHeader ({title, subtitle, date, nextTitle, titleLink}: ISubSectionHeaderProps) {
   return (
     <div>
         <SSubSectionHeaderTitleDateContainer>
             <div style={{'flexDirection': 'row', 'display': 'flex', 'gap': '0.5rem'}}>
-                <SSubSectionHeaderTitle>{title}</SSubSectionHeaderTitle>
+                {titleLink ? <a href={titleLink}><SSubSectionHeaderTitle>{title}</SSubSectionHeaderTitle></a> :
+                <SSubSectionHeaderTitle>{title}</SSubSectionHeaderTitle>}
+                {/* <SSubSectionHeaderTitle>
+                    {titleLink ? <a href={titleLink}>{title}</a> :
+                    <p>{title}</p>
+                </SSubSectionHeaderTitle> */}
                 <SSubSectionHeaderUnderTitle>{nextTitle}</SSubSectionHeaderUnderTitle>
             </div>
             {/* <SSubSectionHeaderTitle>{title}</SSubSectionHeaderTitle> */}

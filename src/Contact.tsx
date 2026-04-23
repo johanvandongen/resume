@@ -10,7 +10,7 @@ import { ReactComponent as HouseIcon } from './icons/house-solid.svg';
 import { ReactComponent as PhoneIcon } from './icons/phone-solid.svg';
 import { ReactComponent as EnvelopeIcon } from './icons/envelope-solid.svg';    
 import { SimpleList, SimpleListComp } from './SimpleList';
-
+import { ReactComponent as GithubIcon } from './icons/github.svg';    
 export interface IContactProps {
 }
 
@@ -31,16 +31,17 @@ export function Contact (props: IContactProps) {
                 <p>+31 6 37281796</p>
             </SInfoListItem>
             <SInfoListItem>
-            <SInfoSVG><HouseIcon/></SInfoSVG>
-            <SimpleListComp items={[
+                <SInfoSVG><HouseIcon/></SInfoSVG>
+                <p>Netherlands, Rotterdam </p>
+            {/* <SimpleListComp items={[
                 <p>Netherlands, Rotterdam <i style={{'fontSize': 12}}>(Currently)</i></p>,
                 <p>Ramsau im Zillertal <i style={{'fontSize': 12}}>(Nov 2025 - Apr 2026)</i></p>
-                ]} />
+                ]} /> */}
             </SInfoListItem>  
-            <SInfoListItem>
+            {/* <SInfoListItem>
                 <SInfoSVG><CalendarIcon/></SInfoSVG>
                 <p>March 9, 2002</p>
-            </SInfoListItem>
+            </SInfoListItem> */}
             {/* <SInfoListItem>
                 <SInfoSVG><CarIcon/></SInfoSVG>
                 <p>Drivers Licence</p>
@@ -50,9 +51,13 @@ export function Contact (props: IContactProps) {
                 <a href="https://dingdangdongen.nl">dingdangdongen.nl</a>
             </SInfoListItem>
             <SInfoListItem>
+                <SInfoSVG><GithubIcon/></SInfoSVG>
+                <a href="https://github.com/johanvandongen">github.com/johanvandongen</a>
+            </SInfoListItem>
+            {/* <SInfoListItem>
                 <SInfoSVG><YoutubeIcon/></SInfoSVG>
                 <a href="https://www.youtube.com/playlist?list=PLw7BJY_mw5y-x24bypW8aBJJRyAmn7GFU">Snowboard clips</a>
-            </SInfoListItem>
+                </SInfoListItem> */}
         </SInfoList>
     ]}/>
   );

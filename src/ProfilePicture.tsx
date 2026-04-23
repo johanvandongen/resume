@@ -16,6 +16,7 @@ export function ProfilePicture ({title, image}: IProfilePictureProps) {
         </SProfile>
     );
 }
+
 const SProfile = styled.div`
     display: flex;
     flex-direction: column;
@@ -29,11 +30,12 @@ const SProfileTitle = styled.div`
 `
 const SProfileImageContainer = styled.div`
     margin-top: 10px;
-    width: 200px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
-    border-radius: 10px; 
-    border: 3px solid #c5c6c5;
+    border-radius: 100px; 
+    /* border: 5px solid #c5c6c5; */
+    border: 5px solid #232b2b;
 `
 const SProfileImage = styled.img`
     width: 100%;
